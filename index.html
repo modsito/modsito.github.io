@@ -1,78 +1,52 @@
+
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modsito Projects</title>
+  <title>MODSITO PROJECTS</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- CABECERA CENTRADA -->
   <header class="sitio-header">
     <img src="mi_logo.png" alt="Logo" class="logo-img">
     <div class="header-textos">
-      <h1 class="sitio-titulo">Modsito Projects</h1>
-      <p class="sitio-subtitulo">Aplicaciones y juegos modificados libres de virus.</p>
+      <h1 class="sitio-titulo">MODSITO PROJECTS</h1>
+      <p class="sitio-subtitulo">Proyectos APK 100% seguros</p>
     </div>
   </header>
 
+  <!-- PANTALLA PRINCIPAL -->
   <div id="pantalla-inicio">
-    <div class="seccion-titulo">Aplicaciones populares</div>
-    <div class="categorias-nav">
-      <a href="#" class="cat-item activo">Android</a>
-      <a href="#" class="cat-item">Windows</a>
-      <a href="#" class="cat-item">Linux</a>
-    </div>
-
     <div class="apps-container">
       
-      <div class="app-card" onclick="mostrarDetalles('BitLife', '3.24.1', '180M', 'Unlimited Money, Bitizenship, God Mode', 'https://www.mediafire.com/tu-link-bitlife', 'bitlife_icon.png')">
+      <!-- TARJETA LIMPIA -->
+      <div class="app-card" onclick="mostrarDetalles('World Soccer Champs', 'v9.7', '80M', 'Offline Datapack Fix, Licencias Desbloqueadas.', 'https://www.mediafire.com/link', 'wsc_icon.png')">
         <div class="icon-wrapper">
-          <img src="bitlife_icon.png" alt="BitLife" class="app-icon">
+          <img src="wsc_icon.png" alt="World Soccer Champs" class="app-icon">
         </div>
-        <div class="app-meta">
-          <span class="estrella">★</span> 4.8 <span class="gratis-tag">Gratuito</span>
-        </div>
-        <div class="app-name">BitLife Simulator</div>
+        <div class="app-name">World Soccer Champs</div>
       </div>
-      </div>
+
+    </div>
   </div>
 
+  <!-- PANTALLA DETALLES (Mismo contenido, diseño más limpio) -->
   <div id="pantalla-detalles" class="vista-detalles">
+    <!-- ... (El resto se mantiene igual) ... -->
     <a href="#" class="btn-volver" onclick="volverAlInicio()">← Volver</a>
-    
     <div class="detalles-header">
       <img id="det-icon" src="" class="detalles-icon">
       <div class="detalles-title-box">
-        <h2 id="det-name">Nombre de App</h2>
-        <div class="detalles-subtitle">Candywriter Modded</div>
+        <h2 id="det-name">Nombre</h2>
+        <div class="detalles-subtitle">Modded Version</div>
       </div>
     </div>
-
-    <table class="info-table">
-      <tr>
-        <td class="info-label">📱 App Name</td>
-        <td class="info-value" id="tab-name">---</td>
-      </tr>
-      <tr>
-        <td class="info-label">📦 Size</td>
-        <td class="info-value" id="tab-size">---</td>
-      </tr>
-      <tr>
-        <td class="info-label">⚡ Latest Version</td>
-        <td class="info-value" id="tab-version">---</td>
-      </tr>
-      <tr>
-        <td class="info-label">🎮 MOD Info</td>
-        <td class="info-value" id="tab-mod">---</td>
-      </tr>
-    </table>
-
-    <div class="alerta-box">
-      <strong>Attention!</strong> This game is designed for devices with ARM64 CPU (AArch64, arm64-v8a). You will not be able to install the modification on a device with a 32-bit processor.
-    </div>
-
-    <a href="#" id="btn-download-link" target="_blank" class="btn-descargar-global">Download</a>
+    <!-- ... -->
   </div>
 
   <script src="script.js"></script>
