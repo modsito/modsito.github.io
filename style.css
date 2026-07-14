@@ -1,39 +1,90 @@
-/* VARIABLES DE DISEÑO (Para cambiar colores al tiro) */
+/* IMPORTAR FUENTE INTER */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
 :root {
-  --bg-principal: #0d1117;       /* Fondo oscuro estilo GitHub/Discord */
-  --bg-tarjeta: #161b22;         /* Gris oscuro para las tarjetas */
-  --bg-borde: #30363d;           /* Bordes suaves */
-  --texto-principal: #f0f6fc;    /* Blanco suave para no cansar la vista */
-  --texto-secundario: #8b949e;   /* Gris para textos secundarios */
-  --color-acento: #58a6ff;       /* Azul eléctrico premium */
-  --color-verde: #39d353;        /* Verde brillante para "Gratuito" */
-  --shadow-premium: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --bg-principal: #0d1117;
+  --bg-tarjeta: #161b22;
+  --bg-borde: #30363d;
+  --texto-principal: #f0f6fc;
+  --texto-secundario: #8b949e;
+  --color-acento: #58a6ff;
 }
 
 body {
   background-color: var(--bg-principal);
   color: var(--texto-principal);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif; /* Fuente profesional */
   margin: 0;
   padding: 20px;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* BARRA SUPERIOR */
+/* HEADER CENTRADO */
 .sitio-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--bg-borde);
-  margin-bottom: 25px;
+  text-align: center;
+  padding: 40px 0;
 }
 
 .logo-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px; /* Bordes redondeados modernos */
-  object-fit: cover;
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border: 2px solid var(--color-acento);
+}
+
+.sitio-titulo {
+  font-size: 1.8em;
+  font-weight: 800;
+  margin: 0;
+}
+
+.sitio-subtitulo {
+  color: var(--texto-secundario);
+  margin-top: 5px;
+}
+
+/* GRIDS DE TARJETAS */
+.apps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.app-card {
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--bg-borde);
+  border-radius: 16px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.app-card:hover {
+  border-color: var(--color-acento);
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.app-icon { width: 100%; height: 100%; object-fit: cover; }
+
+.app-name {
+  font-size: 0.9em;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* (El resto de la vista de detalles se mantiene igual que antes) */
   border: 2px solid var(--color-acento);
   box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
 }
