@@ -1,28 +1,28 @@
-
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MODSITO PROJECTS</title>
+  <title>Modsito Projects</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts: Inter -->
+  <!-- Fuente Inter ultra limpia -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- CABECERA SUPER LIMPIA Y CENTRADA -->
-<header class="sitio-header">
-  <img src="mi_logo.png" alt="Logo" class="logo-img">
-  <h1 class="sitio-titulo">MODSITO PROJECTS</h1>
-</header>
+  <!-- CONTENEDOR CENTRAL DE LA WEB -->
+  <div class="web-wrapper">
 
+    <!-- CABECERA CENTRADA -->
+    <header class="sitio-header">
+      <img src="mi_logo.png" alt="Logo Modsito" class="logo-img">
+      <h1 class="sitio-titulo">MODSITO PROJECTS</h1>
+    </header>
 
-  <!-- PANTALLA PRINCIPAL -->
-  <div id="pantalla-inicio">
-    <div class="apps-container">
+    <!-- CUADRÍCULA DE JUEGOS -->
+    <main class="apps-container">
       
-      <!-- TARJETA LIMPIA -->
+      <!-- TARJETA DEL JUEGO -->
       <div class="app-card" onclick="mostrarDetalles('World Soccer Champs', 'v9.7', '80M', 'Offline Datapack Fix, Licencias Desbloqueadas.', 'https://www.mediafire.com/link', 'wsc_icon.png')">
         <div class="icon-wrapper">
           <img src="wsc_icon.png" alt="World Soccer Champs" class="app-icon">
@@ -30,21 +30,8 @@
         <div class="app-name">World Soccer Champs</div>
       </div>
 
-    </div>
-  </div>
+    </main>
 
-  <!-- PANTALLA DETALLES (Mismo contenido, diseño más limpio) -->
-  <div id="pantalla-detalles" class="vista-detalles">
-    <!-- ... (El resto se mantiene igual) ... -->
-    <a href="#" class="btn-volver" onclick="volverAlInicio()">← Volver</a>
-    <div class="detalles-header">
-      <img id="det-icon" src="" class="detalles-icon">
-      <div class="detalles-title-box">
-        <h2 id="det-name">Nombre</h2>
-        <div class="detalles-subtitle">Modded Version</div>
-      </div>
-    </div>
-    <!-- ... -->
   </div>
 
   <script src="script.js"></script>
