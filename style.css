@@ -1,337 +1,115 @@
-/* IMPORTAR FUENTE INTER */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-
 :root {
-  --bg-principal: #0d1117;
-  --bg-tarjeta: #161b22;
-  --bg-borde: #30363d;
-  --texto-principal: #f0f6fc;
-  --texto-secundario: #8b949e;
-  --color-acento: #58a6ff;
+  --bg-principal: #0d1117;       /* Fondo oscuro estilo GitHub */
+  --bg-tarjeta: #161b22;         /* Gris para tarjetas */
+  --bg-borde: #30363d;           /* Bordes sutiles */
+  --texto-principal: #f0f6fc;    /* Texto claro */
+  --texto-secundario: #8b949e;   /* Gris para detalles */
+  --color-acento: #58a6ff;       /* Azul brillante de Modsito */
+}
+
+/* RESET GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: var(--bg-principal);
   color: var(--texto-principal);
-  font-family: 'Inter', sans-serif; /* Fuente profesional */
-  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-//* HEADER TOTALMENTE CENTRADO */
+/* ENVOLTURA PARA CENTRAR TODO EN MÓVILES */
+.web-wrapper {
+  width: 100%;
+  max-width: 450px; /* Limita el ancho para que se vea ordenado en celular */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER CENTRADO */
 .sitio-header {
   display: flex;
-  flex-direction: column;   /* Hace que el texto vaya abajo de la imagen */
-  align-items: center;       /* Centra horizontalmente todo */
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 30px 0 15px 0;    /* Menos espacio arriba y abajo */
+  padding: 40px 0 25px 0;
+  width: 100%;
 }
 
 .logo-img {
-  width: 80px;               /* Un tamaño cómodo para móviles */
-  height: 80px;
-  border-radius: 18px;
-  margin-bottom: 12px;       /* Separación justa con el texto de abajo */
-  border: 2px solid var(--color-acento);
+  width: 90px;
+  height: 90px;
+  border-radius: 22px;
+  margin-bottom: 15px;
+  border: 2.5px solid var(--color-acento);
   box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
   object-fit: cover;
 }
 
 .sitio-titulo {
-  font-size: 1.4em;          /* Tamaño limpio para que no sea gigante */
+  font-size: 1.5em;
   font-weight: 800;
-  margin: 0;
   color: var(--texto-principal);
   letter-spacing: 0.5px;
 }
 
-/* GRIDS DE TARJETAS */
+/* CONTENEDOR DE TARJETAS */
 .apps-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.app-card {
-  background-color: var(--bg-tarjeta);
-  border: 1px solid var(--bg-borde);
-  border-radius: 16px;
-  padding: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.app-card:hover {
-  border-color: var(--color-acento);
-  transform: translateY(-5px);
-}
-
-.icon-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 10px;
-  background-color: #0d1117; /* Fondo oscuro mientras carga la imagen */
-}
-
-.app-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        /* Esto hace que la imagen se adapte perfecta sin deformarse */
-  display: block;
-}
-
-.app-name {
-  font-size: 0.9em;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* (El resto de la vista de detalles se mantiene igual que antes) */
-  border: 2px solid var(--color-acento);
-  box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
-}
-
-.sitio-titulo {
-  font-size: 1.4em;
-  font-weight: 800;
-  margin: 0;
-  letter-spacing: -0.5px;
-}
-
-.sitio-subtitulo {
-  font-size: 0.85em;
-  color: var(--texto-secundario);
-  margin: 3px 0 0 0;
-}
-
-/* CATEGORÍAS */
-.seccion-titulo {
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 20px 0 15px 5px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--color-acento);
-}
-
-.categorias-nav {
   display: flex;
-  gap: 15px;
-  border-bottom: 1px solid var(--bg-borde);
-  padding-bottom: 10px;
-  margin-bottom: 25px;
+  justify-content: center; /* Centra la tarjeta si hay solo una */
+  padding: 10px 0;
 }
 
-.cat-item {
-  font-size: 0.95em;
-  color: var(--texto-secundario);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.cat-item:hover {
-  color: var(--texto-principal);
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.cat-item.activo {
-  color: var(--color-acento);
-  background-color: rgba(88, 166, 255, 0.1);
-  font-weight: bold;
-}
-
-/* CONTENEDOR Y TARJETAS */
-.apps-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 20px;
-  padding-bottom: 20px;
-}
-
+/* TARJETA INDIVIDUAL */
 .app-card {
   background-color: var(--bg-tarjeta);
   border: 1px solid var(--bg-borde);
-  border-radius: 16px;
-  padding: 12px;
+  border-radius: 18px;
+  padding: 14px;
+  width: 150px; /* Tamaño perfecto para que no se deforme */
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: var(--shadow-premium);
+  transition: transform 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .app-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-acento);
-  box-shadow: 0 8px 30px rgba(88, 166, 255, 0.15);
 }
 
+/* CONTENEDOR DEL ICONO DEL JUEGO */
 .icon-wrapper {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 10px;
-  background-color: #0d1117;
+  margin-bottom: 12px;
+  background-color: #21262d; /* Color de carga mientras subes el icono */
 }
 
 .app-icon {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.app-meta {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.8em;
-  margin-bottom: 6px;
-  color: var(--texto-secundario);
-}
-
-.estrella {
-  color: #ffc107;
-}
-
-.gratis-tag {
-  color: var(--color-verde);
-  font-weight: bold;
-  background-color: rgba(57, 211, 83, 0.1);
-  padding: 1px 6px;
-  border-radius: 4px;
-}
-
+/* NOMBRE DEL JUEGO */
 .app-name {
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 600;
+  text-align: center;
   color: var(--texto-principal);
   line-height: 1.3;
-}
-
-/* PANTALLA DETALLES PREMIUM */
-.vista-detalles {
-  display: none;
-  background: var(--bg-tarjeta);
-  border: 1px solid var(--bg-borde);
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: var(--shadow-premium);
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.btn-volver {
-  display: inline-flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--texto-principal);
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--bg-borde);
-  text-decoration: none;
-  font-size: 0.85em;
-  font-weight: 600;
-  margin-bottom: 20px;
-  transition: background 0.2s;
-}
-
-.btn-volver:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.detalles-header {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.detalles-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  object-fit: cover;
-  border: 2px solid var(--bg-borde);
-}
-
-.detalles-title-box h2 {
-  margin: 0;
-  font-size: 1.4em;
-  color: var(--texto-principal);
-}
-
-.detalles-subtitle {
-  font-size: 0.85em;
-  color: var(--color-acento);
-  margin-top: 4px;
-}
-
-/* TABLA DE INFO */
-.info-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 25px;
-  font-size: 0.9em;
-}
-
-.info-table tr {
-  border-bottom: 1px solid var(--bg-borde);
-}
-
-.info-table td {
-  padding: 12px 8px;
-}
-
-.info-label {
-  color: var(--texto-secundario);
-  font-weight: 500;
-  width: 35%;
-}
-
-.info-value {
-  color: var(--texto-principal);
-  font-weight: 600;
-}
-
-/* ALERTA */
-.alerta-box {
-  background-color: rgba(248, 81, 73, 0.1);
-  border: 1px solid rgba(248, 81, 73, 0.2);
-  border-radius: 10px;
-  padding: 12px;
-  margin-bottom: 25px;
-  font-size: 0.85em;
-  line-height: 1.4;
-  color: #ff7b72;
-}
-
-.alerta-box strong {
-  color: #ff7b72;
-}
-
-/* BOTÓN DESCARGAR */
-.btn-descargar-global {
-  display: block;
-  background: linear-gradient(135deg, #1f6feb 0%, #58a6ff 100%);
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 14px;
-  border-radius: 12px;
-  font-size: 1em;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);
-}
-
-.btn-descargar-global:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(88, 166, 255, 0.5);
 }
