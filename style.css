@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
 :root {
   --bg-principal: #0d1117;       /* Fondo oscuro estilo GitHub */
   --bg-tarjeta: #161b22;         /* Gris para tarjetas */
@@ -31,6 +32,38 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* BOTÓN DE CONTACTO FLOTANTE */
+.btn-contacto {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--bg-borde);
+  border-radius: 50%; /* Lo hace un círculo perfecto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-secundario);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100; /* Asegura que quede por encima de todo */
+}
+
+.btn-contacto:hover {
+  color: var(--color-acento);
+  border-color: var(--color-acento);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(88, 166, 255, 0.2);
+}
+
+.icono-correo {
+  width: 20px;
+  height: 20px;
 }
 
 /* HEADER CENTRADO */
@@ -95,7 +128,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 12px;
-  background-color: #21262d; /* Color de carga mientras subes el icono */
+  background-color: #21262d; /* Color de carga */
 }
 
 .app-icon {
@@ -112,4 +145,126 @@ body {
   text-align: center;
   color: var(--texto-principal);
   line-height: 1.3;
+}
+
+/* PANTALLA DETALLES PREMIUM */
+.vista-detalles {
+  display: none; /* Empieza oculta */
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--bg-borde);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--texto-principal);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--bg-borde);
+  text-decoration: none;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: background 0.2s;
+}
+
+.btn-volver:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.detalles-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.detalles-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid var(--bg-borde);
+}
+
+.detalles-title-box h2 {
+  margin: 0;
+  font-size: 1.4em;
+  color: var(--texto-principal);
+}
+
+.detalles-subtitle {
+  font-size: 0.85em;
+  color: var(--color-acento);
+  margin-top: 4px;
+}
+
+/* TABLA DE INFO */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  font-size: 0.9em;
+}
+
+.info-table tr {
+  border-bottom: 1px solid var(--bg-borde);
+}
+
+.info-table td {
+  padding: 12px 8px;
+}
+
+.info-label {
+  color: var(--texto-secundario);
+  font-weight: 500;
+  width: 35%;
+}
+
+.info-value {
+  color: var(--texto-principal);
+  font-weight: 600;
+}
+
+/* ALERTA */
+.alerta-box {
+  background-color: rgba(248, 81, 73, 0.1);
+  border: 1px solid rgba(248, 81, 73, 0.2);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 25px;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #ff7b72;
+}
+
+.alerta-box strong {
+  color: #ff7b72;
+}
+
+/* BOTÓN DESCARGAR */
+.btn-descargar-global {
+  display: block;
+  background: linear-gradient(135deg, #1f6feb 0%, #58a6ff 100%);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1em;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);
+}
+
+.btn-descargar-global:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(88, 166, 255, 0.5);
 }
