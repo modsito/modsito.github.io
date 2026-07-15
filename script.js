@@ -8,7 +8,7 @@ function mostrarDetalles(nombre, version, peso, novedades, linkDescarga, imagenI
   document.getElementById('det-name').innerText = nombre;
   document.getElementById('det-icon').src = imagenIcono;
   
-  // Aquí rellenamos la tabla de información
+  // Rellenar la tabla de información
   document.getElementById('det-version').innerText = version;
   document.getElementById('det-peso').innerText = peso;
   document.getElementById('det-novedades').innerText = novedades;
@@ -22,5 +22,5 @@ function mostrarDetalles(nombre, version, peso, novedades, linkDescarga, imagenI
 function volverAlInicio() {
   // Ocultar detalles y volver a mostrar la pantalla principal
   document.getElementById('pantalla-detalles').style.display = 'none';
-  document.getElementById('pantalla-inicio').style.display = 'block';
+  document.getElementById('pantalla-inicio').style.display = 'flex';
 }
