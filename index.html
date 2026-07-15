@@ -10,6 +10,14 @@
 </head>
 <body>
 
+  <!-- BOTÓN DE CONTACTO (Esquina superior izquierda) -->
+  <a href="mailto:tu_correo_real@gmail.com" class="btn-contacto" title="Contáctame">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icono-correo">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+  </a>
+
   <!-- CONTENEDOR CENTRAL DE LA WEB -->
   <div class="web-wrapper">
 
@@ -19,10 +27,10 @@
       <h1 class="sitio-titulo">MODSITO PROJECTS</h1>
     </header>
 
-    <!-- PANTALLA PRINCIPAL (Asegúrate de que tenga id="pantalla-inicio") -->
+    <!-- PANTALLA PRINCIPAL (Lista de juegos) -->
     <main id="pantalla-inicio" class="apps-container">
       
-      <!-- TARJETA DEL JUEGO (Con el onclick apuntando a la función) -->
+      <!-- TARJETA DEL JUEGO -->
       <div class="app-card" onclick="mostrarDetalles('World Soccer Champs', 'v9.7', '80M', 'Offline Datapack Fix, Licencias Desbloqueadas.', 'https://www.mediafire.com/link', 'wsc_icon.png')">
         <div class="icon-wrapper">
           <img src="wsc_icon.png" alt="World Soccer Champs" class="app-icon">
@@ -32,7 +40,7 @@
 
     </main>
 
-    <!-- PANTALLA DETALLES (Asegúrate de que tenga id="pantalla-detalles") -->
+    <!-- PANTALLA DETALLES (Se activa mediante JS) -->
     <div id="pantalla-detalles" class="vista-detalles">
       <a href="#" class="btn-volver" onclick="volverAlInicio()">← Volver</a>
       
@@ -44,6 +52,7 @@
         </div>
       </div>
 
+      <!-- TABLA DE INFORMACIÓN -->
       <table class="info-table">
         <tr>
           <td class="info-label">Versión</td>
@@ -59,13 +68,17 @@
         </tr>
       </table>
 
+      <!-- ADVERTENCIA SUTIL -->
       <div class="alerta-box">
         <strong>Aviso:</strong> Instala bajo tu propio riesgo. Este archivo ha sido analizado y está libre de malware.
       </div>
 
+      <!-- BOTÓN DE DESCARGA -->
       <a id="btn-descarga" href="#" target="_blank" class="btn-descargar-global">DESCARGAR APK</a>
     </div>
 
   </div>
+
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>
