@@ -19,57 +19,53 @@
       <h1 class="sitio-titulo">MODSITO PROJECTS</h1>
     </header>
 
-    <!-- CUADRÍCULA DE JUEGOS -->
-    <main class="apps-container">
+    <!-- PANTALLA PRINCIPAL (Asegúrate de que tenga id="pantalla-inicio") -->
+    <main id="pantalla-inicio" class="apps-container">
       
-      <!-- TARJETA DEL JUEGO -->
+      <!-- TARJETA DEL JUEGO (Con el onclick apuntando a la función) -->
       <div class="app-card" onclick="mostrarDetalles('World Soccer Champs', 'v9.7', '80M', 'Offline Datapack Fix, Licencias Desbloqueadas.', 'https://www.mediafire.com/link', 'wsc_icon.png')">
         <div class="icon-wrapper">
           <img src="wsc_icon.png" alt="World Soccer Champs" class="app-icon">
         </div>
         <div class="app-name">World Soccer Champs</div>
       </div>
-  <!-- PANTALLA DETALLES (Se activa mediante JS) -->
-  <div id="pantalla-detalles" class="vista-detalles">
-    <a href="#" class="btn-volver" onclick="volverAlInicio()">← Volver</a>
-    
-    <div class="detalles-header">
-      <img id="det-icon" src="" class="detalles-icon">
-      <div class="detalles-title-box">
-        <h2 id="det-name">Nombre del Juego</h2>
-        <div class="detalles-subtitle">Mod Verificado</div>
-      </div>
-    </div>
-
-    <!-- TABLA DE INFORMACIÓN -->
-    <table class="info-table">
-      <tr>
-        <td class="info-label">Versión</td>
-        <td id="det-version" class="info-value">--</td>
-      </tr>
-      <tr>
-        <td class="info-label">Tamaño</td>
-        <td id="det-peso" class="info-value">--</td>
-      </tr>
-      <tr>
-        <td class="info-label">Mod Info</td>
-        <td id="det-novedades" class="info-value">--</td>
-      </tr>
-    </table>
-
-    <!-- ADVERTENCIA SUTIL -->
-    <div class="alerta-box">
-      <strong>Aviso:</strong> Instala bajo tu propio riesgo. Este archivo ha sido analizado y está libre de malware.
-    </div>
-
-    <!-- BOTÓN DE DESCARGA -->
-    <a id="btn-descarga" href="#" target="_blank" class="btn-descargar-global">DESCARGAR APK</a>
-  </div>
 
     </main>
 
-  </div>
+    <!-- PANTALLA DETALLES (Asegúrate de que tenga id="pantalla-detalles") -->
+    <div id="pantalla-detalles" class="vista-detalles">
+      <a href="#" class="btn-volver" onclick="volverAlInicio()">← Volver</a>
+      
+      <div class="detalles-header">
+        <img id="det-icon" src="" class="detalles-icon">
+        <div class="detalles-title-box">
+          <h2 id="det-name">Nombre del Juego</h2>
+          <div class="detalles-subtitle">Mod Verificado</div>
+        </div>
+      </div>
 
-  <script src="script.js"></script>
+      <table class="info-table">
+        <tr>
+          <td class="info-label">Versión</td>
+          <td id="det-version" class="info-value">--</td>
+        </tr>
+        <tr>
+          <td class="info-label">Tamaño</td>
+          <td id="det-peso" class="info-value">--</td>
+        </tr>
+        <tr>
+          <td class="info-label">Mod Info</td>
+          <td id="det-novedades" class="info-value">--</td>
+        </tr>
+      </table>
+
+      <div class="alerta-box">
+        <strong>Aviso:</strong> Instala bajo tu propio riesgo. Este archivo ha sido analizado y está libre de malware.
+      </div>
+
+      <a id="btn-descarga" href="#" target="_blank" class="btn-descargar-global">DESCARGAR APK</a>
+    </div>
+
+  </div>
 </body>
-</html>
+</html> 
