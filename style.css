@@ -78,9 +78,9 @@ body {
 }
 
 .logo-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 22px;
+  width: 55px;
+  height: 60px;
+  border-radius: 0px;
   margin-bottom: 15px;
   border: 2.5px solid var(--color-acento);
   box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
@@ -88,7 +88,7 @@ body {
 }
 
 .sitio-titulo {
-  font-size: 1.5em;
+  font-size: 1.0em;
   font-weight: 800;
   color: var(--texto-principal);
   letter-spacing: 0.5px;
