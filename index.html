@@ -32,8 +32,8 @@
     <!-- PANTALLA PRINCIPAL (Lista de juegos) -->
     <main id="pantalla-inicio" class="apps-container">
       
-      <!-- TARJETA DEL JUEGO -->
-<div class="app-card" onclick="mostrarDetalles('Minecraft', 'v26.45', '378MB', 'Versión 64 bits, descarga comprimida, incluye inicio de sesión xbox y música.', 'https://www.mediafire.com/file/d3faxhk607oykwa/minecraft-26-45-01-arm64-v8a-xbox-compressed.apk/file?dkey=d3faxhk607oykwa', 'minecraft-icon.png')">
+      <!-- TARJETA DEL JUEGO CON 2 LINKS -->
+<div class="app-card" onclick="mostrarDetalles('Minecraft', 'v26.45', '378MB', 'Descarga comprimida, incluye inicio de sesión Xbox y música. Elige la versión según la arquitectura de tu procesador.', 'https://www.mediafire.com/file/d3faxhk607oykwa/minecraft-26-45-01-arm64-v8a-xbox-compressed.apk/file?dkey=d3faxhk607oykwa', 'https://www.mediafire.com/file/r7wweut3ldhkvla/minecraft-26-45.apk/file', 'minecraft-icon.png')">
   <div class="icon-wrapper">
     <img src="minecraft-icon.png" alt="Minecraft" class="app-icon">
   </div>
@@ -75,9 +75,11 @@
         <strong>Aviso:</strong> Este archivo fue comprobado por varios usuarios, no debería dar errores.
       </div>
 
-      <!-- BOTÓN DE DESCARGA -->
-      <a id="btn-descarga" href="#" target="_blank" class="btn-descargar-global">DESCARGAR APK</a>
-    </div>
+      <!-- BOTONES DE DESCARGA -->
+<div class="descargas-container">
+  <a id="btn-descarga-v8a" href="#" target="_blank" class="btn-descargar-global">DESCARGAR ARM64 (v8a)</a>
+  <a id="btn-descarga-v7a" href="#" target="_blank" class="btn-descargar-global btn-v7a">DESCARGAR ARM32 (v7a)</a>
+</div>
 
   </div>
 
