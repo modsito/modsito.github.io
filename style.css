@@ -268,3 +268,8 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(88, 166, 255, 0.5);
 }
+
+/* SEPARACIÓN PARA EL SEGUNDO BOTÓN */
+.btn-v7a {
+  margin-top: 14px;
+}
