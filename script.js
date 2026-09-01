@@ -14,4 +14,10 @@ function mostrarDetalles(nombre, version, peso, novedades, urlV8a, urlV7a, icono
   // Mostrar pantalla
   document.getElementById('pantalla-inicio').style.display = 'none';
   document.getElementById('pantalla-detalles').style.display = 'block';
+  function volverAlInicio() {
+  // Oculta la vista de detalles
+  document.getElementById('pantalla-detalles').style.display = 'none';
+  
+  // Muestra la pantalla principal de tarjetas
+  document.getElementById('pantalla-inicio').style.display = 'grid'; // O 'flex' / 'block', según como tengas configurado el contenedor principal en tu CSS
 }
