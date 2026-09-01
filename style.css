@@ -94,40 +94,39 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* CONTENEDOR PRINCIPAL DE TARJETAS */
+/* CONTENEDOR DE TARJETAS */
 .apps-container {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 15px !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   padding: 10px;
   box-sizing: border-box;
-  }
+}
 
-/* TARJETA INDIVIDUAL CORREGIDA */
+/* TARJETA INDIVIDUAL */
 .app-card {
   background-color: var(--bg-tarjeta);
   border: 1px solid var(--bg-borde);
   border-radius: 18px;
   padding: 12px;
-  width: 135px; /* Un poco más compacto para celulares */
-  box-sizing: border-box; /* Vital para que el padding no rompa el ancho */
+  width: 135px;
+  box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.2s, border-color 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* Evita que una tarjeta tape el toque de la otra */
-  flex-shrink: 0; /* Evita que el contenedor las aplaste */
 }
 
 .app-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-acento);
 }
-
 
 /* CONTENEDOR DEL ICONO DEL JUEGO */
 .icon-wrapper {
