@@ -94,37 +94,40 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* CONTENEDOR DE TARJETAS (GRILLA HORIZONTAL) */
+/* CONTENEDOR PRINCIPAL DE TARJETAS */
 .apps-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Crea columnas automáticamente */
-  gap: 15px; /* Espacio entre cada tarjeta */
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 15px !important;
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
   padding: 10px;
   box-sizing: border-box;
-}
+  }
 
-
-/* TARJETA INDIVIDUAL */
+/* TARJETA INDIVIDUAL CORREGIDA */
 .app-card {
   background-color: var(--bg-tarjeta);
   border: 1px solid var(--bg-borde);
   border-radius: 18px;
-  padding: 14px;
-  width: 150px; /* Tamaño perfecto para que no se deforme */
+  padding: 12px;
+  width: 135px; /* Un poco más compacto para celulares */
+  box-sizing: border-box; /* Vital para que el padding no rompa el ancho */
   cursor: pointer;
   transition: transform 0.2s, border-color 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* Evita que una tarjeta tape el toque de la otra */
+  flex-shrink: 0; /* Evita que el contenedor las aplaste */
 }
 
 .app-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-acento);
 }
+
 
 /* CONTENEDOR DEL ICONO DEL JUEGO */
 .icon-wrapper {
