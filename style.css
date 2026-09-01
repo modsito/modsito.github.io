@@ -94,13 +94,18 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* CONTENEDOR DE TARJETAS */
+/* CONTENEDOR DE TARJETAS (GRILLA HORIZONTAL) */
 .apps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Crea columnas automáticamente */
+  gap: 15px; /* Espacio entre cada tarjeta */
   width: 100%;
-  display: flex;
-  justify-content: center; /* Centra la tarjeta si hay solo una */
-  padding: 10px 0;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
 }
+
 
 /* TARJETA INDIVIDUAL */
 .app-card {
