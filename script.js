@@ -14,7 +14,7 @@ function mostrarDetalles(nombre, version, peso, novedades, urlV8a, urlV7a, icono
   // Mostrar pantalla
   document.getElementById('pantalla-inicio').style.display = 'none';
   document.getElementById('pantalla-detalles').style.display = 'block';
-  function volverAlInicio() {
+  function volverAlInicio() }
   // Oculta la vista de detalles
   document.getElementById('pantalla-detalles').style.display = 'none';
   
