@@ -32,23 +32,25 @@
     <!-- PANTALLA PRINCIPAL (Lista de juegos) -->
     <main id="pantalla-inicio" class="apps-container">
       
-      <!-- TARJETA DEL JUEGO CON 2 LINKS -->
-<div class="app-card" onclick="mostrarDetalles('Minecraft', 'v26.45', '378MB', 'Descarga comprimida, incluye inicio de sesión Xbox y música. Elige la versión según la arquitectura de tu procesador.', 'https://www.mediafire.com/file/d3faxhk607oykwa/minecraft-26-45-01-arm64-v8a-xbox-compressed.apk/file?dkey=d3faxhk607oykwa', 'https://www.mediafire.com/file/r7wweut3ldhkvla/minecraft-26-45.apk/file', 'minecraft-icon.png')">
-  <div class="icon-wrapper">
-    <img src="minecraft-icon.png" alt="Minecraft" class="app-icon">
-  </div>
-  <div class="app-name">Minecraft</div>
-  <!-- TARJETA DE JUEGO NUEVO -->
-<div class="app-card" onclick="mostrarDetalles('Pato Player', 'v27', '9MB, 'Pato Player es una app para ver canales de TV gratis, es especialmente buena para ver deportes. En el enlace 1 está la app, en el 2 está el reproductor necesario para usar la app.', 'https://www.mediafire.com/file/tu881z8z23tkb6y/PatoplayerPro27.apk/file', 'https://www.mediafire.com/file/tjevsp682g90027/UiPlayerPro8.apk/file', 'patoplayer-icon.png')">
-  <div class="icon-wrapper">
-    <img src="patoplayer-icon.png" alt="Pato Player" class="app-icon">
-  </div>
-  <div class="app-name">Pato Player</div>
-</div>
+      <main id="pantalla-inicio" class="apps-container">
 
-</div>
+  <!-- TARJETA 1: MINECRAFT -->
+  <div class="app-card" onclick="mostrarDetalles('Minecraft', 'v26.45', '378MB', 'Descarga comprimida, incluye inicio de sesión Xbox y música. Elige la versión según la arquitectura de tu procesador.', 'https://www.mediafire.com/file/LINK_V8A', 'https://www.mediafire.com/file/LINK_V7A', 'minecraft-icon.png')">
+    <div class="icon-wrapper">
+      <img src="minecraft-icon.png" alt="Minecraft" class="app-icon">
+    </div>
+    <div class="app-name">Minecraft</div>
+  </div> <!-- <-- IMPORTANTE: ESTE CIERRE DE MINECRAFT TIENE QUE ESTAR ACÁ -->
 
-    </main>
+  <!-- TARJETA 2: PATO PLAYER -->
+  <div class="app-card" onclick="mostrarDetalles('Pato Player', 'v1.0', '15MB', 'Aplicación de reproducción.', 'https://www.mediafire.com/file/LINK_V8A', 'https://www.mediafire.com/file/LINK_V7A', 'pato-icon.png')">
+    <div class="icon-wrapper">
+      <img src="pato-icon.png" alt="Pato Player" class="app-icon">
+    </div>
+    <div class="app-name">Pato Player</div>
+  </div> <!-- <-- CIERRE DE PATO PLAYER -->
+
+</main>
 
     <!-- PANTALLA DETALLES (Se activa mediante JS) -->
     <div id="pantalla-detalles" class="vista-detalles">
